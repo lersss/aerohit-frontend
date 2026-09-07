@@ -13,10 +13,9 @@ export default function Navbar() {
           <img
             src="https://cdn.dreamjob.ru/employer/3616765/6788709d112215JNr7p.webp"
             alt="Аэрохит"
-            style={{ height: '32px', width: 'auto', marginRight: '10px' }}
+            style={{ height: '32px', width: 'auto' }}
             onError={(e) => { e.target.style.display = 'none'; }}
           />
-          <span>Аэрохит ИБП</span>
         </Link>
 
         <button className={`nav-toggle ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
