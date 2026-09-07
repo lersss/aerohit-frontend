@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'https://aerohit-backend-skycomposer.amvera.io',
+  baseURL: 'https://aerohit-backend-skycomposer.amvera.io',
   withCredentials: true,
 });
 
