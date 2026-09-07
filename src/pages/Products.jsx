@@ -25,7 +25,7 @@ export default function Products() {
 
   return (
     <div>
-      <h1>Наши товары</h1>
+      <h1>Портативные электростанции и солнечные панели</h1>
       <div className="products-grid">
         {products.map(p => (
           <div key={p.id} className="product-card">
@@ -38,7 +38,7 @@ export default function Products() {
             )}
             <h3>{p.model}</h3>
             <p className="power">{p.power}</p>
-            <p className="price">от {Math.round(p.price1)} ₽</p>
+            <p className="price">от {Math.round(Math.min(p.price1, p.price2, p.price3, p.price4))} ₽</p>
             <Link to={`/product/${p.id}`} className="btn-detail">Подробнее</Link>
           </div>
         ))}
