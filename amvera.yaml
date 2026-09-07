@@ -4,9 +4,8 @@ meta:
     name: npm
     version: 20
 build:
-  additionalCommands:
-    - npm install
-    - npm run build
+  artifacts:
+    - build: /
 run:
   command: npx serve -s build -l 3000
   containerPort: 3000
