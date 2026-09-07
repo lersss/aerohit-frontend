@@ -1,12 +1,13 @@
 meta:
   environment: node
   toolchain:
-    name: node
+    name: npm
     version: 20
 build:
-  artifacts:
-    - build: /
+  additionalCommands:
+    - npm install
+    - npm run build
 run:
-  command: npx serve -s . -l 3000
+  command: npx serve -s build -l 3000
   containerPort: 3000
   persistenceMount: /data
