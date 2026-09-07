@@ -5,9 +5,9 @@ function App() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const apiUrl = import.meta.env.VITE_API_URL || 'https://aerohit-backend-skycomposer.amvera.io';
 
   useEffect(() => {
-    const apiUrl = import.meta.env.VITE_API_URL || 'https://aerohit-backend-skycomposer.amvera.io';
     fetch(`${apiUrl}/api/products`)
       .then(res => {
         if (!res.ok) throw new Error('Ошибка загрузки товаров');
@@ -22,7 +22,7 @@ function App() {
         setError(err.message);
         setLoading(false);
       });
-  }, []);
+  }, [apiUrl]);
 
   if (loading) return <div style={{ padding: '40px', textAlign: 'center' }}>Загрузка товаров...</div>;
   if (error) return <div style={{ padding: '40px', textAlign: 'center', color: 'red' }}>Ошибка: {error}</div>;
@@ -38,7 +38,7 @@ function App() {
             <div key={p.id} style={{ border: '1px solid #ccc', padding: '15px', width: '250px', borderRadius: '8px' }}>
               {p.imageUrl && (
                 <img
-                  src={p.imageUrl}
+                  src={apiUrl + p.imageUrl}   // ✅ Полный путь до бэкенда
                   alt={p.model}
                   style={{ width: '100%', height: '150px', objectFit: 'contain', marginBottom: '10px' }}
                 />
