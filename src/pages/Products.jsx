@@ -38,7 +38,7 @@ export default function Products() {
             )}
             <h3>{p.model}</h3>
             <p className="power">{p.power}</p>
-            <p className="price">от {p.price1} ₽</p>
+            <p className="price">от {Math.round(p.price1)} ₽</p>
             <Link to={`/product/${p.id}`} className="btn-detail">Подробнее</Link>
           </div>
         ))}

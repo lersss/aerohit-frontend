@@ -65,8 +65,8 @@ export default function ProductDetail() {
             onChange={(e) => setQuantity(Number(e.target.value))}
           />
         </div>
-        <p className="price">Цена за шт: {price.toFixed(2)} ₽</p>
-        <p className="total">Итого: {total.toFixed(2)} ₽</p>
+        <p className="price">Цена за шт: {Math.round(price)} ₽</p>
+        <p className="total">Итого: {Math.round(total)} ₽</p>
         <button className="btn-add" onClick={handleAdd}>Добавить в корзину</button>
       </div>
     </div>

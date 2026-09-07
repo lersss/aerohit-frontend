@@ -62,7 +62,7 @@ export default function Cart() {
             ))}
           </ul>
           <div className="cart-total">
-            <p><strong>Итого: {total.toFixed(2)} ₽</strong></p>
+            <p><strong>Итого: {Math.round(total)} ₽</strong></p>
             <button className="btn-clear" onClick={handleClear}>Очистить корзину</button>
             <Link to="/checkout"><button className="btn-checkout">Оформить заказ</button></Link>
           </div>
