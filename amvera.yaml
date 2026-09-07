@@ -1,5 +1,12 @@
 meta:
   environment: node
   toolchain:
-    name: browser
+    name: node
     version: 20
+build:
+  artifacts:
+    - build: /
+run:
+  command: npx serve -s . -l 3000
+  containerPort: 3000
+  persistenceMount: /data
