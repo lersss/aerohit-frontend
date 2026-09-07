@@ -31,7 +31,7 @@ export default function Products() {
           <div key={p.id} className="product-card">
             {p.imageUrl && (
               <img
-                src={import.meta.env.VITE_API_URL + p.imageUrl}
+                src={'https://aerohit-backend-skycomposer.amvera.io' + p.imageUrl}
                 alt={p.model}
                 className="product-image"
               />

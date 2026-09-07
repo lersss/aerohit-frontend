@@ -46,7 +46,7 @@ export default function ProductDetail() {
     <div className="product-detail">
       {product.imageUrl && (
         <img
-          src={import.meta.env.VITE_API_URL + product.imageUrl}
+          src={'https://aerohit-backend-skycomposer.amvera.io' + product.imageUrl}
           alt={product.model}
           className="detail-image"
         />
