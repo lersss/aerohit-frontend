@@ -94,9 +94,12 @@ export default function Cart() {
               <span className="cart-total-label">Итого:</span>
               <span className="cart-total-amount">{Math.round(total)} ₽</span>
             </div>
-            <Link to="/checkout">
-              <button className="btn-checkout">Оформить заказ</button>
-            </Link>
+            <div className="cart-total-actions">
+              <Link to="/" className="btn-continue">← Продолжить покупки</Link>
+              <Link to="/checkout">
+                <button className="btn-checkout">Оформить заказ</button>
+              </Link>
+            </div>
           </div>
         </>
       )}

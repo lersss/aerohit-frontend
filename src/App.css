@@ -693,3 +693,24 @@ h1 {
     height: 100px;
   }
 }
+.cart-total-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn-continue {
+  color: var(--primary);
+  font-weight: 500;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 30px;
+  transition: background 0.2s;
+}
+
+.btn-continue:hover {
+  background: #e2e8f0;
+}
