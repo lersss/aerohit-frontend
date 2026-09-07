@@ -28,19 +28,20 @@ export default function Products() {
       <h1>Портативные электростанции и солнечные панели</h1>
       <div className="products-grid">
         {products.map(p => (
-          <div key={p.id} className="product-card">
-            {p.imageUrl && (
-              <img
-                src={'https://aerohit-backend-skycomposer.amvera.io' + p.imageUrl}
-                alt={p.model}
-                className="product-image"
-              />
-            )}
-            <h3>{p.model}</h3>
-            <p className="power">{p.power}</p>
-            <p className="price">от {Math.round(Math.min(p.price1, p.price2, p.price3, p.price4))} ₽</p>
-            <Link to={`/product/${p.id}`} className="btn-detail">Подробнее</Link>
-          </div>
+          <Link to={`/product/${p.id}`} key={p.id} style={{ textDecoration: 'none', color: 'inherit' }}>
+            <div className="product-card">
+              {p.imageUrl && (
+                <img
+                  src={'https://aerohit-backend-skycomposer.amvera.io' + p.imageUrl}
+                  alt={p.model}
+                  className="product-image"
+                />
+              )}
+              <h3>{p.model}</h3>
+              <p className="power">{p.power}</p>
+              <p className="price">от {Math.round(Math.min(p.price1, p.price2, p.price3, p.price4))} ₽</p>
+            </div>
+          </Link>
         ))}
       </div>
     </div>
