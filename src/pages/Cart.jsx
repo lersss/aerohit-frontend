@@ -90,7 +90,10 @@ export default function Cart() {
           </div>
 
           <div className="cart-total">
-            <p><strong>Итого: {Math.round(total)} ₽</strong></p>
+            <div className="cart-total-row">
+              <span className="cart-total-label">Итого:</span>
+              <span className="cart-total-amount">{Math.round(total)} ₽</span>
+            </div>
             <Link to="/checkout">
               <button className="btn-checkout">Оформить заказ</button>
             </Link>
