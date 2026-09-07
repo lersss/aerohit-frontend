@@ -3,3 +3,5 @@ meta:
   toolchain:
     name: browser
     version: 20
+build:
+  outputDir: dist
