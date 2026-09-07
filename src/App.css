@@ -1,4 +1,3 @@
-/* Общие стили */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,7 +5,7 @@
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
   background: #f8f9fa;
   color: #333;
 }
@@ -17,7 +16,6 @@ body {
   padding: 20px;
 }
 
-/* Навигация */
 .navbar {
   background: #2c3e50;
   padding: 15px 0;
@@ -57,7 +55,6 @@ body {
   color: #3498db;
 }
 
-/* Сетка товаров */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -115,7 +112,6 @@ body {
   background: #2980b9;
 }
 
-/* Детальная страница */
 .product-detail {
   display: flex;
   gap: 40px;
@@ -175,7 +171,6 @@ body {
   background: #1e8449;
 }
 
-/* Корзина */
 .cart-list {
   list-style: none;
   padding: 0;
@@ -210,29 +205,30 @@ body {
   flex-wrap: wrap;
 }
 
-.btn-clear, .btn-checkout {
-  padding: 10px 20px;
+.btn-clear {
+  background: #e67e22;
+  color: #fff;
   border: none;
+  padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
 }
 
-.btn-clear {
-  background: #e67e22;
-  color: #fff;
-}
-
 .btn-checkout {
   background: #27ae60;
   color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .btn-checkout:hover {
   background: #1e8449;
 }
 
-/* Оформление заказа */
 .checkout {
   max-width: 600px;
   margin: 30px auto;
@@ -252,7 +248,8 @@ body {
   margin-bottom: 5px;
 }
 
-.form-group input, .form-group textarea {
+.form-group input,
+.form-group textarea {
   width: 100%;
   padding: 10px;
   border: 1px solid #ddd;
@@ -281,7 +278,9 @@ body {
   cursor: not-allowed;
 }
 
-.loading, .error, .success-message {
+.loading,
+.error,
+.success-message {
   text-align: center;
   padding: 40px;
   font-size: 18px;
