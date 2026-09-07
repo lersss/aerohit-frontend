@@ -36,7 +36,6 @@ function App() {
         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px' }}>
           {products.map(p => (
             <div key={p.id} style={{ border: '1px solid #ccc', padding: '15px', width: '250px', borderRadius: '8px' }}>
-              {/* Отображение изображения */}
               {p.imageUrl && (
                 <img
                   src={p.imageUrl}
