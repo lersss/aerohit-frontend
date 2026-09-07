@@ -1,15 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
+
   return (
     <nav className="navbar">
       <div className="nav-container">
-        <Link to="/" className="nav-logo">Аэрохит ИБП</Link>
-        <ul className="nav-menu">
-          <li><Link to="/">Товары</Link></li>
-          <li><Link to="/cart">Корзина</Link></li>
-          <li><Link to="/admin/panel" target="_blank">Админка</Link></li>
+        <Link to="/" className="nav-logo">
+          <i className="fas fa-bolt"></i> Аэрохит ИБП
+        </Link>
+
+        <button className={`nav-toggle ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul className={`nav-menu ${isOpen ? 'open' : ''}`}>
+          <li><Link to="/" onClick={toggleMenu}><i className="fas fa-home"></i> Товары</Link></li>
+          <li><Link to="/cart" onClick={toggleMenu}><i className="fas fa-shopping-cart"></i> Корзина</Link></li>
+          <li><Link to="/admin/panel" target="_blank" onClick={toggleMenu}><i className="fas fa-user-shield"></i> Админка</Link></li>
         </ul>
       </div>
     </nav>
