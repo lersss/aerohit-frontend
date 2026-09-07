@@ -38,7 +38,7 @@ function App() {
             <div key={p.id} style={{ border: '1px solid #ccc', padding: '15px', width: '250px', borderRadius: '8px' }}>
               {p.imageUrl && (
                 <img
-                  src={apiUrl + p.imageUrl}   // ✅ Полный путь до бэкенда
+                  src={apiUrl + p.imageUrl}
                   alt={p.model}
                   style={{ width: '100%', height: '150px', objectFit: 'contain', marginBottom: '10px' }}
                 />
