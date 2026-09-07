@@ -28,7 +28,7 @@ body {
   background: var(--bg);
   color: var(--text);
   line-height: 1.6;
-  padding-top: 70px; /* место для фиксированной навигации */
+  padding-top: 70px;
 }
 
 .container {
@@ -73,13 +73,19 @@ img {
 }
 
 .nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   font-size: 24px;
   font-weight: 700;
   color: var(--primary);
   letter-spacing: -0.5px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+}
+
+.nav-logo img {
+  height: 32px;
+  width: auto;
+  object-fit: contain;
 }
 
 .nav-logo i {
@@ -111,7 +117,6 @@ img {
   font-size: 18px;
 }
 
-/* Бургер-кнопка */
 .nav-toggle {
   display: none;
   flex-direction: column;
@@ -143,7 +148,6 @@ img {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
-/* Адаптив для навигации */
 @media (max-width: 768px) {
   .nav-toggle {
     display: flex;
@@ -182,6 +186,7 @@ h1 {
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
   gap: 30px;
   margin-top: 20px;
+  align-items: stretch;
 }
 
 .product-card {
@@ -192,6 +197,8 @@ h1 {
   transition: all var(--transition);
   text-align: center;
   border: 1px solid rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
 }
 
 .product-card:hover {
@@ -238,6 +245,8 @@ h1 {
   border: none;
   font-size: 14px;
   cursor: pointer;
+  margin-top: auto;
+  align-self: center;
 }
 
 .btn-detail:hover {

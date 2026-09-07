@@ -10,7 +10,13 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="nav-container">
         <Link to="/" className="nav-logo">
-          <i className="fas fa-bolt"></i> Аэрохит ИБП
+          <img
+            src="https://cdn.dreamjob.ru/employer/3616765/6788709d112215JNr7p.webp"
+            alt="Аэрохит"
+            style={{ height: '32px', width: 'auto', marginRight: '10px' }}
+            onError={(e) => { e.target.style.display = 'none'; }}
+          />
+          <span>Аэрохит ИБП</span>
         </Link>
 
         <button className={`nav-toggle ${isOpen ? 'active' : ''}`} onClick={toggleMenu}>
