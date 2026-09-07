@@ -27,7 +27,6 @@ export default function Navbar() {
         <ul className={`nav-menu ${isOpen ? 'open' : ''}`}>
           <li><Link to="/" onClick={toggleMenu}><i className="fas fa-home"></i> Товары</Link></li>
           <li><Link to="/cart" onClick={toggleMenu}><i className="fas fa-shopping-cart"></i> Корзина</Link></li>
-          <li><Link to="/admin/panel" target="_blank" onClick={toggleMenu}><i className="fas fa-user-shield"></i> Админка</Link></li>
         </ul>
       </div>
     </nav>
