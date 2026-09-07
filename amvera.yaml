@@ -3,3 +3,8 @@ meta:
   toolchain:
     name: browser
     version: 20
+build:
+  additionalCommands:
+    - npm run build
+  artifacts:
+    - dist: /
